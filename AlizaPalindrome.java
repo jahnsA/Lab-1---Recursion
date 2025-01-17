@@ -3,33 +3,14 @@ import java.util.Scanner;
 public class AlizaPalindrome {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        /*System.out.println("Enter a word and I will check if it's a palindrome.");
-        String word = scan.next;*/
-
-        //TEST CODE
-        String word1 = "a";
-        String word2 = "at";
-        String word3 = "madam";
-        String word4 = "crane";
-        String word5 = "foot";
-        String word6 = "toot";
-
-        isPalindrome(word1);//works
-        isPalindrome(word2);//works
-
-        //odd palindrome
-        isPalindrome(word3);
-        //odd not palindrome
-        isPalindrome(word4);
-
-        //even not palindrome
-        isPalindrome(word5);
-        //even is palindrome
-        isPalindrome(word6);
-
-        isPalindrome("deified");
-
-
+        int userInt;
+        do { 
+            System.out.println("Enter a word and I will check if it's a palindrome:");
+            String word = scan.next();
+            isPalindrome(word);
+            System.out.println("Enter 1 to continue or 0 to quit.");
+            userInt = scan.nextInt();
+        } while(userInt != 0);
     }//end main
     
     //RECURSIVE METHOD: solved differently than iterative
@@ -43,7 +24,6 @@ public class AlizaPalindrome {
         }//end if statement
         isPalindromeHelper(word, 0, word.length()-1);
     }//end isPalindrome
-
     //recursive helper method
     public static void isPalindromeHelper(String word, int left, int right) {
         if(left >= right){
