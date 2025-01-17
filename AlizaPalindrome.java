@@ -14,7 +14,7 @@ public class AlizaPalindrome {
         String word5 = "foot";
         String word6 = "toot";
 
-       /*isPalindrome(word1);//works
+        isPalindrome(word1);//works
         isPalindrome(word2);//works
 
         //odd palindrome
@@ -25,26 +25,42 @@ public class AlizaPalindrome {
         //even not palindrome
         isPalindrome(word5);
         //even is palindrome
-        isPalindrome(word6);*/
+        isPalindrome(word6);
+
+        isPalindrome("deified");
 
 
     }//end main
-
-    //RECURSIVE METHOD
+    
+    //RECURSIVE METHOD: solved differently than iterative
     public static void isPalindrome(String word) {
+        //word to lower case so ASCII values work
         word.toLowerCase();
-        //case for one letter word
-        if(word.length() == 1) {
+        //case for one letter word or blank
+        if(word.length() <= 1) {
             System.out.println(word + " is not a palindrome.");
             return;
         }//end if statement
-
+        isPalindromeHelper(word, 0, word.length()-1);
     }//end isPalindrome
+
+    //recursive helper method
+    public static void isPalindromeHelper(String word, int left, int right) {
+        if(left >= right){
+            System.out.println(word + " is a palindrome.");
+            return;
+        }//end if statement
+        if(word.charAt(left) != word.charAt(right)){
+            System.out.println(word + " is not a palindrome.");
+            return;
+        }//end if statement
+        isPalindromeHelper(word, left + 1, right - 1);
+    }//end isPalindromeHelper
 
     //ITERATIVE METHOD
     public static void isPalindromeIteration(String word) {
         word.toLowerCase();
-        if(word.length() == 1) {
+        if(word.length() <= 1) {
             System.out.println(word + " is not a palindrome.");
             return;
         }//end if statement
@@ -59,4 +75,4 @@ public class AlizaPalindrome {
         //IS PALINDROME
         System.out.println(word + " is a palindrome.");
     }//end isPalindromeIteration
-}
+}//end class AlizaPalindrome
