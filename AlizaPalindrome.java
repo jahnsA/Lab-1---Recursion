@@ -5,10 +5,24 @@ public class AlizaPalindrome {
         Scanner scan = new Scanner(System.in);
         /*System.out.println("Enter a word and I will check if it's a palindrome.");
         String word = scan.next;*/
-    }
-    public void isPalindrome(String word) {
-        if (word.length() == 1) {
-            
+
+        //TEST CODE
+        String word1 = "a";
+        String word2 = "at";
+        String word3 = "dad";
+        String word4 = "cat";
+        String word5 = "foot";
+        String word6 = "toot";
+
+        isPalindrome(word1);
+        isPalindrome(word2);
+
+
+    }//end main
+    public static void isPalindrome(String word) {
+        //add case for no word entered
+        if (word.length() == 1 || word.length() == 2) {
+            System.out.println(word + " is not a palindrome.");
         }
-    }
+    }//end isPalindrome
 }
