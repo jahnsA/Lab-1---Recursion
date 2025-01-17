@@ -19,6 +19,8 @@ public class AlizaPalindrome {
 
         //even not palindrome
         isPalindrome(word5);
+        //even is palindrome
+        isPalindrome(word6);
 
 
     }//end main
@@ -34,9 +36,10 @@ public class AlizaPalindrome {
                 //chars don't match
                 if(word.charAt(i) != word.charAt(word.length()-(i+1))){
                     System.out.println(word + " is not a palindrome.");
-                } 
-                
-            }
+                } else {
+                    System.out.println(word + " is a palindrome.");
+                }//end if/else   
+            }//end for loop
         } else { //case ODD
 
         }
