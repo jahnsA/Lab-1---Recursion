@@ -14,7 +14,7 @@ public class AlizaPalindrome {
         String word5 = "foot";
         String word6 = "toot";
 
-        isPalindrome(word1);//works
+       /*isPalindrome(word1);//works
         isPalindrome(word2);//works
 
         //odd palindrome
@@ -25,25 +25,38 @@ public class AlizaPalindrome {
         //even not palindrome
         isPalindrome(word5);
         //even is palindrome
-        isPalindrome(word6);
+        isPalindrome(word6);*/
 
 
     }//end main
+
+    //RECURSIVE METHOD
     public static void isPalindrome(String word) {
-        //add case for no word entered
+        word.toLowerCase();
+        //case for one letter word
+        if(word.length() == 1) {
+            System.out.println(word + " is not a palindrome.");
+            return;
+        }//end if statement
+
+    }//end isPalindrome
+
+    //ITERATIVE METHOD
+    public static void isPalindromeIteration(String word) {
         word.toLowerCase();
         if(word.length() == 1) {
             System.out.println(word + " is not a palindrome.");
             return;
-        }
-        //should work for even and odd
+        }//end if statement
+        //check if palindrome
         for (int i = 0; i < word.length()/2; i++) {
-            //if chars don't match at opposite ends of word
+            //NOT PALINDROME if chars don't match at opposite ends of word
             if(word.charAt(i) != word.charAt(word.length()-(i+1))){
                 System.out.println(word + " is not a palindrome.");
                 return;
-            } 
+            }//end if statement
         }//end for loop
+        //IS PALINDROME
         System.out.println(word + " is a palindrome.");
-    }//end isPalindrome
+    }//end isPalindromeIteration
 }
