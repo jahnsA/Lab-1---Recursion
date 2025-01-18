@@ -1,5 +1,4 @@
 import java.util.Scanner;
-//to lowercase
 public class AlizaPalindrome {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -7,6 +6,8 @@ public class AlizaPalindrome {
         do { 
             System.out.println("Enter a word and I will check if it's a palindrome:");
             String word = scan.next();
+            //word to lower case so ASCII values work
+            word = word.toLowerCase();
             isPalindrome(word);
             System.out.println("Enter 1 to continue or 0 to quit.");
             userInt = scan.nextInt();
@@ -14,9 +15,7 @@ public class AlizaPalindrome {
     }//end main
     
     //RECURSIVE METHOD: solved differently than iterative
-    public static void isPalindrome(String word) {
-        //word to lower case so ASCII values work
-        word.toLowerCase();
+    public static void isPalindrome(String word) {;
         //case for one letter word or blank
         if(word.length() <= 1) {
             System.out.println(word + " is not a palindrome.");
@@ -38,7 +37,7 @@ public class AlizaPalindrome {
     }//end isPalindromeHelper
 
     //ITERATIVE METHOD
-    public static void isPalindromeIteration(String word) {
+    /*public static void isPalindromeIteration(String word) {
         word.toLowerCase();
         if(word.length() <= 1) {
             System.out.println(word + " is not a palindrome.");
@@ -54,5 +53,5 @@ public class AlizaPalindrome {
         }//end for loop
         //IS PALINDROME
         System.out.println(word + " is a palindrome.");
-    }//end isPalindromeIteration
+    }//end isPalindromeIteration*/
 }//end class AlizaPalindrome
