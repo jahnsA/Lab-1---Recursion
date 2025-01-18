@@ -23,14 +23,28 @@ void isPalindrome(char* word) {
     isPalindromeHelper(0, strlen(word)-1, word);
 }//end isPalindrome
 int main(){
-    //add user input and to lowercase here
+    int userInt;
+    char word[20];
+    do{
+        printf("Enter a word and I will check if it's a palindrome:");
+        scanf("%s", word);
+        //turn to lowercase
+        for(int i = 0; i < strlen(word); i++) {
+            word[i] = tolower(word[i]);
+        }//end for loop
+        isPalindrome(word);
+        printf("Enter 1 to continue or 0 to quit:");
+        userInt = scanf("%d", userInt);
+    } while(userInt != 0);
+    
+
     //TEST cases
-    isPalindrome("a");
+    /*isPalindrome("a");
     isPalindrome("at");
     isPalindrome("dad");
     isPalindrome("tea");
     isPalindrome("toot");
     isPalindrome("book");
     isPalindrome("madam");
-    isPalindrome("creak");
+    isPalindrome("creak");*/
 }//end main
