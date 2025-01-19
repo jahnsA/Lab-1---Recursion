@@ -26,25 +26,17 @@ int main(){
     int userInt;
     char word[20];
     do{
-        printf("Enter a word and I will check if it's a palindrome:");
+        printf("Enter a word and I will check if it's a palindrome:\n");
         scanf("%s", word);
         //turn to lowercase
         for(int i = 0; i < strlen(word); i++) {
             word[i] = tolower(word[i]);
         }//end for loop
         isPalindrome(word);
-        printf("Enter 1 to continue or 0 to quit:");
-        userInt = scanf("%d", userInt);
+        printf("Enter 1 to continue or 0 to quit:\n");
+        userInt = scanf("%d", &userInt);
     } while(userInt != 0);
+    printf("All done!");
     
-
-    //TEST cases
-    /*isPalindrome("a");
-    isPalindrome("at");
-    isPalindrome("dad");
-    isPalindrome("tea");
-    isPalindrome("toot");
-    isPalindrome("book");
-    isPalindrome("madam");
-    isPalindrome("creak");*/
+    return 0;
 }//end main
