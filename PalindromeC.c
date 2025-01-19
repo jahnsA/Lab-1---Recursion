@@ -1,6 +1,7 @@
 //W3 Schools C
 //https://www.geeksforgeeks.org/tolower-function-in-c/?ref=ml_lbp
 //https://www.programiz.com/c-programming/library-function/string.h/strlen
+//ChatGPT
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -34,7 +35,7 @@ int main(){
         }//end for loop
         isPalindrome(word);
         printf("Enter 1 to continue or 0 to quit:\n");
-        userInt = scanf("%d", &userInt);
+        scanf("%d", &userInt);
     } while(userInt != 0);
     printf("All done!");
     
