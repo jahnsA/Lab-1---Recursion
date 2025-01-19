@@ -1,7 +1,3 @@
-//W3 Schools C
-//https://www.geeksforgeeks.org/tolower-function-in-c/?ref=ml_lbp
-//https://www.programiz.com/c-programming/library-function/string.h/strlen
-//ChatGPT
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>

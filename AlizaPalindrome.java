@@ -15,7 +15,7 @@ public class AlizaPalindrome {
     }//end main
     
     //RECURSIVE METHOD: solved differently than iterative
-    public static void isPalindrome(String word) {;
+    public static void isPalindrome(String word) {
         //case for one letter word or blank
         if(word.length() <= 1) {
             System.out.println(word + " is not a palindrome.");
